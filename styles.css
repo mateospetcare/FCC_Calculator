@@ -1,0 +1,53 @@
+.container {
+  height: 500px;
+  width: auto;
+  margin: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+#calculator{
+  border-radius: 0 0 40px 40px;
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: #3A6EB3;
+  position: relative;
+}
+
+.screen {
+  height: 50px;
+  width: 250px;
+  background-color: #8C8565; 
+  margin: 10px 0 0 25px;
+  position: absolute;
+}
+
+.lightCharge {
+  height: 80px;
+  width: 300px;
+  border-radius: 50px 50px 0 0;
+  background-color: #3A6EB3; 
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.smallScreen {
+   height: 35px;
+  width: 125px;
+  background-color: #9A7158; 
+  margin: 15px 0 0 30px;
+  position: absolute;
+}
+
+.onPlusButton {
+  background-color: #C02B30;
+}
+
+.numButton {
+  background-color: #585654; 
+}
