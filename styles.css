@@ -32,6 +32,21 @@ h1 {
   position: absolute;
 }
 
+#total {
+  height: 35px;
+  float: right;
+  margin-right: 10px;
+  font-size: 30px;
+ /* background-color: green;*/
+}
+
+#total_calc {
+  height: 15px;
+  float: right;
+  margin: 30px -12px 0 0;
+  font-size: 15px;
+}
+
 .lightCharge {
   height: 80px;
   width: 300px;
@@ -50,12 +65,14 @@ h1 {
   position: absolute;
 }
 
-.onPlusButton {
-  background-color: #C02B30;
+
+
+.numButton, .func {
+  background-color: #585654; 
 }
 
-.numButton {
-  background-color: #585654; 
+.onPlusButton {
+  background-color: #C02B30;
 }
 
 button {
@@ -64,6 +81,10 @@ button {
   border-radius: 15px;
   color: white;
   margin-right: 10px;
+}
+
+button:focus {
+  outline:0;
 }
 
 .numButtonZero {

@@ -1,0 +1,24 @@
+{
+  "name": "fcc_calculator",
+  "version": "1.0.0",
+  "description": "freecodecamp calculator project",
+  "main": "scripts.js",
+  "dependencies": {
+    "browserify": "^14.3.0",
+    "expr-eval": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateospetcare/FCC_Calculator.git"
+  },
+  "author": "mateo balcorta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateospetcare/FCC_Calculator/issues"
+  },
+  "homepage": "https://github.com/mateospetcare/FCC_Calculator#readme"
+}
