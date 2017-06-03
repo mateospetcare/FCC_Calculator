@@ -37,14 +37,15 @@ h1 {
   float: right;
   margin-right: 10px;
   font-size: 30px;
- /* background-color: green;*/
+  clear: both;
 }
 
 #total_calc {
+  float:right;
   height: 15px;
-  float: right;
-  margin: 30px -12px 0 0;
+  margin: -5px 2px 0 0;
   font-size: 15px;
+  clear: both;
 }
 
 .lightCharge {
@@ -65,9 +66,7 @@ h1 {
   position: absolute;
 }
 
-
-
-.numButton, .func, .clear_entry {
+.numButton, .func, .clear_entry, .numButtonEquals {
   background-color: #585654; 
 }
 
@@ -132,4 +131,10 @@ button:focus {
 img{
   height: 15px;
   width: 15px;
+}
+
+.smallScreen img {
+  height: 70px;
+  width: 70px;
+  margin: 0 0 50px 170px; 
 }

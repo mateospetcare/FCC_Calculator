@@ -1335,10 +1335,6 @@ $( document ).ready(function() {
   $(".numButton, .func").click(function() {
     var numberValue = parseInt($(this).text());
     var arraySymbols = ['x', '-', '/', '+'];
-     
-    // if(arraySymbols.indexOf(lastInput) > -1){
-     
-    // }
 
     if(numberValue || numberValue === 0){
         stringCalculation += numberValue;
@@ -1363,7 +1359,6 @@ $( document ).ready(function() {
         found = false;
 
     } else if($(this).text() === '-' && found || $(this).text() === '+' && found){
-      
        totalCalculateString += $(this).text();
        stringCalculation += $(this).text(); 
        lastValueArr.push($(this).text());
@@ -1371,52 +1366,48 @@ $( document ).ready(function() {
         lastInput = lastValueArr[lastValueArr.length -1];
         found = false;
     }
-     $("#total_calc")[0].innerText = stringCalculation
-     console.log(totalCalculateString, stringCalculation, lastValueArr)
-    
-   });
+     $("#total_calc")[0].innerText = stringCalculation;
+  });
 
-//now to fix so multiplication shows up propertly on GUI
   $(".numButtonEquals").click(function() {
-    console.log('inside', totalCalculateString)
      var newCalc = Parser.evaluate(totalCalculateString);
     $("#total")[0].innerText = newCalc;
     $("#total_calc")[0].innerText = stringCalculation +"="+ newCalc; 
     var calc_string = newCalc.toString();
-      stringCalculation = calc_string; 
-      totalCalculateString = calc_string;
-      lastValueArr = [calc_string]; 
+    stringCalculation = calc_string; 
+    totalCalculateString = calc_string;
+    lastValueArr = [calc_string]; 
   }); 
 
   $(".all_clear").click(function(){
-    stringCalculation = ""; 
-    totalCalculateString = "";
-    $("#total_calc")[0].innerText = "";
-    $("#total")[0].innerText = "";
-    lastValueArr = [];
-    })
+      stringCalculation = ""; 
+      totalCalculateString = "";
+      $("#total_calc")[0].innerText = "";
+      $("#total")[0].innerText = "";
+      lastValueArr = [];
+    });
 
   $(".clear_entry").click(function(){
-    lastValueArr.splice(lastValueArr.length-1, 1);
-
-     var newCalc = lastValueArr.join('');
-
+    if(lastValueArr.length > 1){
+      lastValueArr.splice(lastValueArr.length-1, 1);
+      var newCalc = lastValueArr.join('');
       stringCalculation = newCalc;
 
-     if(totalCalculateString.indexOf('*') === -1){
-      totalCalculateString = newCalc;
-     } else {
-      totalCalculateString = totalCalculateString.slice(0, -1);
-     }
+      if(totalCalculateString.indexOf('*') === -1){
+        totalCalculateString = newCalc;
+      } else {
+        totalCalculateString = totalCalculateString.slice(0, -1);
+      }
 
-     var numberValue = parseInt(newCalc);
-     
-     if(lastValueArr.length >= 3){
+      var numberValue = parseInt(newCalc);
+
+      if(lastValueArr.length >= 3){
         $("#total")[0].innerText = Parser.evaluate(numberValue); 
         $("#total_calc")[0].innerText = totalCalculateString +"="+ numberValue; 
-     } else {
-      $("#total_calc")[0].innerText = stringCalculation;
-     }
+        } else {
+        $("#total_calc")[0].innerText = stringCalculation;
+      }
+    }
   })
 
   });
