@@ -1370,7 +1370,7 @@ $( document ).ready(function() {
   });
 
   $(".numButtonEquals").click(function() {
-     var newCalc = Parser.evaluate(totalCalculateString);
+     var newCalc = Math.round(Parser.evaluate(totalCalculateString)*100)/100;
     $("#total")[0].innerText = newCalc;
     $("#total_calc")[0].innerText = stringCalculation +"="+ newCalc; 
     var calc_string = newCalc.toString();
